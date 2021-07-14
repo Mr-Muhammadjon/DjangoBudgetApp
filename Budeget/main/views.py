@@ -8,7 +8,7 @@ from .models import *
 class HomeView(View):
 
     def get(self, request):
-        form = Plan(request.GET)
+        form = AddPlan(request.GET)
         plans = Plans.objects.all().order_by('-id')
         buget = MyBuget.objects.last()
         context = {

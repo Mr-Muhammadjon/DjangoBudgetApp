@@ -1,4 +1,3 @@
-from os import name
 from django.db import models
 
 # Create your models here.
@@ -13,7 +12,7 @@ class MyBuget(models.Model):
         return str(self.total)
 
 
-class MyPlans(models.Model):
+class Plans(models.Model):
     name = models.CharField('name', max_length=150)
     comment = models.CharField('comment', max_length=450)
     spent = models.IntegerField('spent money')
